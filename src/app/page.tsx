@@ -10,9 +10,37 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import { cn } from "@/lib/utils";
 
+const title = `${RESUME_DATA.name} | ${RESUME_DATA.about}`;
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
+  title,
   description: RESUME_DATA.summary,
+  openGraph: {
+    title,
+    description: RESUME_DATA.summary,
+    type: "website",
+    url: "https://cv.akamfoad.dev",
+    images: {
+      width: 1488,
+      height: 988,
+      alt: "Akam Foad",
+      type: "image/png",
+      url: "https://cv.akamfoad.dev/og-image.png",
+    },
+  },
+  twitter: {
+    title,
+    description: RESUME_DATA.summary,
+    card: "summary",
+    site: "@AkamFoad",
+    creator: "@AkamFoad",
+    images: {
+      width: 1488,
+      height: 988,
+      alt: "Akam Foad",
+      type: "image/png",
+      url: "https://cv.akamfoad.dev/og-image.png",
+    },
+  },
 };
 
 export default function Page() {
