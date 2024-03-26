@@ -1,5 +1,7 @@
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
+import headshotUrl from "./headshot.png";
+
 export const RESUME_DATA = {
   name: "Akam Foad",
   initials: "AF",
@@ -8,7 +10,7 @@ export const RESUME_DATA = {
   about: "Lead software engineer and Fullstack web developer.",
   summary:
     "As a Full Stack Engineer, I have successfully taken multiple products from idea to production. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and Remix. I have over 5 years of experience in working remotely.",
-  avatarUrl: "/headshot.png",
+  avatarUrl: headshotUrl.src,
   personalWebsiteUrl: "https://akamfoad.dev",
   contact: {
     email: "me@akamfoad.dev",
