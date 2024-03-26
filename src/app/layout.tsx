@@ -23,6 +23,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <link rel="icon" href="/favicon-48x48.png" type="image/png" />
+        <link rel="icon" href="/favicon-96x96.png" type="image/png" />
+        <link rel="icon" href="/favicon-144x144.png" type="image/png" />
+        <link rel="icon" href="/favicon-192x192.png" type="image/png" />
+      </head>
       <body>{children}</body>
       <Analytics />
     </html>

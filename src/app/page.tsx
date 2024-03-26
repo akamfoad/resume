@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -100,12 +101,20 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Work Experience</h2>
-          {RESUME_DATA.work.map((work) => {
+          {RESUME_DATA.work.map((work, i, array) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                    <h3
+                      className={cn(
+                        "inline-flex items-center justify-center gap-x-1 font-semibold leading-none",
+                        {
+                          hidden:
+                            i > 0 && array.at(i - 1)?.company === work.company,
+                        },
+                      )}
+                    >
                       <a className="hover:underline" href={work.link}>
                         {work.company}
                       </a>
@@ -122,6 +131,7 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
+                    &nbsp;
                     <div className="text-sm tabular-nums text-gray-500">
                       {work.start} - {work.end}
                     </div>
@@ -169,7 +179,7 @@ export default function Page() {
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
