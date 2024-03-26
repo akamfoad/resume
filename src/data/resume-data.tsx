@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Erbil",
   about: "Lead software engineer and Fullstack web developer.",
   summary:
-    "As a Full Stack Engineer, I have successfully taken multiple products from idea to production. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and Remix. I have over 5 years of experience in working remotely.",
+    "As a Full Stack Engineer, I have successfully taken multiple products from idea to production. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and Remix. I have over 5 years of experience working remotely.",
   avatarUrl: headshotUrl.src,
   personalWebsiteUrl: "https://akamfoad.dev",
   contact: {
