@@ -139,8 +139,8 @@ export const RESUME_DATA = {
       techStack: ["TypeScript", "Next.js"],
       description: "My personal portfolio and blog, built with Next.js and MDX",
       link: {
-        label: "First Iraqi Bank Website",
-        href: "https://fib.iq/en",
+        label: "Personal Portfolio",
+        href: "https://akamfoad.dev/",
       },
     },
     {
