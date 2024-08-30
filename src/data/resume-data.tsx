@@ -96,7 +96,7 @@ export const RESUME_DATA = {
     {
       title: "Hacker Native",
       techStack: ["Side Project", "TypeScript", "React-Native", "Expo"],
-      description: "Explore Havker News with a modern look and feel",
+      description: "Explore Hacker News feeds with a modern look and feel",
       link: {
         label: "Hacker Native",
         href: "https://github.com/akamfoad/hacker-native",
