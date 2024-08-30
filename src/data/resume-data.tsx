@@ -94,6 +94,15 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
+      title: "Hacker Native",
+      techStack: ["Side Project", "TypeScript", "React-Native", "Expo"],
+      description: "Explore Havker News with a modern look and feel",
+      link: {
+        label: "Hacker Native",
+        href: "https://github.com/akamfoad/hacker-native",
+      },
+    },
+    {
       title: "Passkeys",
       techStack: ["Side Project", "TypeScript", "Remix", "PWA"],
       description: "Secure and phishing-resistent way for authentication",
